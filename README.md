@@ -14,3 +14,4 @@ is a software metric that measures the number of linearly independent paths thro
 ### Data Types
 
 Java has eight primitive and many non-primitive data types in Java:
+<img width="596" height="335" alt="image" src="https://github.com/user-attachments/assets/24ebcb8e-c92b-4be4-8e81-30ab0d9284f7" />
