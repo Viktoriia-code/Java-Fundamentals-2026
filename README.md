@@ -32,3 +32,5 @@ Inheritance is a mechanism in which one class acquires the property of another c
 
 #### 4. **Polymorphism**:
 Polymorphism is the ability of an object to take on many forms. The most common use of polymorphism in OOP is when a parent class reference is used to refer to a child class instance.
+
+<img width="600" height="auto" alt="image" src="https://github.com/user-attachments/assets/7c6eccde-512b-4132-ae64-3f6c29b7f3c6" />
