@@ -5,17 +5,17 @@ import com.sun.net.httpserver.HttpHandler;
 
 import java.io.IOException;
 import java.io.OutputStream;
-import java.nio.charset.StandardCharsets;
 import java.time.LocalTime;
 
 record ClockpageHandler() implements HttpHandler {
-    @Override
-    public void handle(HttpExchange exchange) throws IOException {
-        byte[] response = LocalTime.now().toString().getBytes(StandardCharsets.UTF_8);
-        exchange.sendResponseHeaders(200, response.length);
-
-        try (OutputStream body = exchange.getResponseBody()) {
-            body.write(response);
-        }
+    @Override public void handle(HttpExchange httpExchange) throws IOException {
+        // ignore getRequestMethod, getRequestURI
+        final String text = " <html><body><h1>Time Service</h1>Current server time is: "
+                + LocalTime.now() // get current system time
+                + "</body></html>";
+        httpExchange.sendResponseHeaders(200, 0);
+        final OutputStream body = httpExchange.getResponseBody();
+        body.write(text.getBytes());
+        body.close();
     }
 }
