@@ -19,9 +19,18 @@ public class Account {
         return balance;
     }
 
-    int withdraw(int amount, int pin) {
-        if(amount>0 && pin == this.pin && amount <= balance)
-            balance -= amount;
+    int withdraw(int amount, int tryPin) {
+        if(amount>0 && tryPin == this.pin) {
+            if (amount <= balance) {
+                balance -= amount;
+            } else if (amount > balance) {
+                balance = 0;
+            }
+        }
         return balance;
+    }
+
+    void changePIN(int oldPin, int newPin) {
+
     }
 }
