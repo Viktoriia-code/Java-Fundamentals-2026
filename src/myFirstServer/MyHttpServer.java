@@ -1,4 +1,4 @@
-package server;
+package myFirstServer;
 
 import com.sun.net.httpserver.HttpServer;
 
