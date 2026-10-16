@@ -1,6 +1,8 @@
+package arrayListDay4;
+
 import java.util.List;
 
-/** Demo program for Day 3 Programming Problem: Registry
+/** Demo program for Day 3 Programming Problem: arrayListDay4.Registry
  * @author R. Schiedermeier
  * @version 2026-10-15
  */
